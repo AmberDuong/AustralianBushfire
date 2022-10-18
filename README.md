@@ -8,4 +8,6 @@ Having learned about HTML and CSS before this unit, creating the structure for t
 
 Most of my Java codes use “querySelector” or “addEventListener”. These are used to show/hide specific elements at exact positions or change CSS style. I have also used mouse/click functions to add effects to the cursor,  and used scroll functions to add effects to the navigation bar.
 
-I had no Javascript experience at the start of the semester, but I spent a lot of time studying and working on this website continuously throughout the project. Overall, I am pleased with the final design, although I would like to revisit some of the concepts.
+I started to build the website just after sketching the layout and gathering content information, before thinking about the animation effects so I spent much more time than I expected to develop ideas. I realised that having a well-designed concept would save much more time and effort than moving to the practice early.
+
+I had no Javascript experience at the start of the semester, but I spent a lot of time studying and working on this website continuously throughout the project. Overall, I am relatively pleased with the final design, although I would like to revisit some of the concepts.
