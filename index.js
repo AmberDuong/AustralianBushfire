@@ -1,4 +1,10 @@
 const reveal = document.querySelector('.navigation');
+const sections = document.querySelectorAll('section[id]');
+const cursor = document.querySelector('.fa-fire');
+const hiddenElements = document.querySelectorAll('.hidden');
+const appear = document.querySelector('#eventimg');
+const hiddenimg = document.querySelector('.content');
+
 
 window.addEventListener('scroll', () => {
     if(window.pageYOffset >700){
@@ -9,25 +15,17 @@ window.addEventListener('scroll', () => {
 });
 
 
-const sections = document.querySelectorAll('section[id]');
 window.addEventListener('scroll', highlight);
 function highlight() {
   
-  // Get current scroll position
   let scrollY = window.pageYOffset;
   
-  // Now we loop through sections to get height, top and ID values for each
   sections.forEach(current => {
     const sectionHeight = current.offsetHeight;
     const sectionTop = current.offsetTop - 100;
     sectionId = current.getAttribute('id');
-    
-    /*
-    - If our current scroll position enters the space where current section on screen is, add .active class to corresponding navigation link, else remove it
-    - To know which link needs an active class, we use sectionId variable we are getting while looping through sections as an selector
-    */
-    if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight
-){
+
+    if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
       document.querySelector('.navigation a[href*=' + sectionId + ']').classList.add('recent');
     } else {
       document.querySelector('.navigation a[href*=' + sectionId + ']').classList.remove('recent');
@@ -35,8 +33,6 @@ function highlight() {
   });
 }
 
-
-const cursor = document.querySelector('.fa-fire');
 
 document.addEventListener('mousemove', (e) => {
   cursor.style.left = e.clientX + 'px';
@@ -55,7 +51,6 @@ const observer = new IntersectionObserver((entries) => {
     });
 });
 
-const hiddenElements = document.querySelectorAll('.hidden');
 hiddenElements.forEach((el) => observer.observe(el));
 
 
@@ -77,9 +72,6 @@ function topFunction() {
 }
 
 
-const appear = document.querySelector('#eventimg');
-const hiddenimg = document.querySelector('.content');
-
 hiddenimg.addEventListener('click', function(){
     if (appear.style.display === 'block') {
       appear.style.display = 'none';
@@ -87,5 +79,3 @@ hiddenimg.addEventListener('click', function(){
       appear.style.display = 'block';
     }
 });
-
-
