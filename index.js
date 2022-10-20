@@ -2,8 +2,7 @@ const reveal = document.querySelector('.navigation');
 const sections = document.querySelectorAll('section[id]');
 const cursor = document.querySelector('.fa-fire');
 const hiddenElements = document.querySelectorAll('.hidden');
-const appear = document.querySelector('#eventimg');
-const hiddenimg = document.querySelector('.content');
+
 
 
 window.addEventListener('scroll', () => {
@@ -70,12 +69,3 @@ function topFunction() {
   document.body.scrollTop = 0; 
   document.documentElement.scrollTop = 0; 
 }
-
-
-hiddenimg.addEventListener('click', function(){
-    if (appear.style.display === 'block') {
-      appear.style.display = 'none';
-    } else {
-      appear.style.display = 'block';
-    }
-});
